@@ -1,0 +1,57 @@
+<div class=golfers-bg>
+
+  <div class="container">
+
+    <h1 class="text-center golfers-h1">Golfers</h1>
+
+    <div class="form-group col-md-11">
+      <input type="text" class="form-control" placeholder="Search for Golfers" ng-model="golferSearch">
+    </div>
+    <div class="col-md-1">
+      <button class="btn btn-primary" ui-sref="app.golfersCreate">Create Golf Buddy Profile</button>
+    </div>
+
+    <div class="row golfer-section">
+
+      <table class="table table-hover">
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Handicap</th>
+          <th>Locations</th>
+          <th>Availability</th>
+          <th>Age</th>
+        </tr>
+
+        <tr ng-repeat="golfer in golfers | filter: golferSearch" ui-sref="app.golfer({id: golfer.id})">
+          <td>{{ $index + 1 }}</td>
+          <td>{{ golfer.firstName }}</td>
+          <td>{{ golfer.email }}</td>
+          <td>{{ golfer.handicap }}</td>
+          <td>
+            <span class="unavailable" ng-class="{'available' : golfer.locations.losAngeles}">Los Angeles </span>
+            <span class="unavailable" ng-class="{'available' : golfer.locations.orangeCounty}">Orange County </span>
+            <span class="unavailable" ng-class="{'available' : golfer.locations.riverside}">Riverside </span>
+          </td>
+          <td>
+
+            <span class="unavailable" ng-class="{'available' : golfer.availability.monday}">M </span>
+            <span class="unavailable" ng-class="{'available' : golfer.availability.tuesday}">Tu </span>
+            <span class="unavailable" ng-class="{'available' : golfer.availability.wednesday}">W </span>
+            <span class="unavailable" ng-class="{'available' : golfer.availability.thursday}">Th </span>
+            <span class="unavailable" ng-class="{'available' : golfer.availability.friday}">F </span>
+            <span class="unavailable" ng-class="{'available' : golfer.availability.saturday}">Sa </span>
+            <span class="unavailable" ng-class="{'available' : golfer.availability.sunday}">Su </span>
+
+
+
+          </td>
+          <td>{{ golfer.age }}</td>
+        </tr>
+      </table>
+
+    </div>
+
+  </div>
+</div>

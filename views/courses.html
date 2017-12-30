@@ -1,0 +1,38 @@
+<div class="container">
+<h1 class="text-center">Find a Course!</h1>
+  <div id="map"></div>
+
+  <div class="form-group col-md-12">
+    <input type="text" class="form-control" placeholder="Search for a Course" ng-model="coursesSearch">
+  </div>
+  <div>
+    <button class="btn btn-primary form-group" ui-sref="app.coursesCreate">Add a Course</button>
+  </div>
+
+  <div class="row courses-section">
+
+    <div class="courses-container col-md-3" ng-repeat="course in courses | filter: coursesSearch" ng-click=>
+
+      <div class="courses-header">
+        <h1 class="courses-heading" ng-click="initMap(15, course.address)">{{ course.name }}</h1>
+      </div>
+      <div class="courses-body">
+        <p>
+          <strong>Address:</strong> {{ course.address }}</p>
+        <p>
+          <strong>Phone Number:</strong> {{ course.phoneNumber }}</p>
+        <p>
+          <strong>Total Yards:</strong> {{ course.totalYards }}</p>
+        <p>
+          <strong>Slope:</strong> {{ course.slope }}</p>
+        <p>
+          <strong>Website:</strong> <a target= "_blank" href="{{ course.website }}">{{ course.website }}</a></p>
+      </div>
+
+      <button class="btn btn-lg btn-info" ui-sref="app.coursesUpdate({id: course.id})">Update</button>
+      <button class="btn btn-lg btn-danger" ng-click="deleteCourse(course)">Delete</button>
+
+    </div>
+  </div>
+
+</div>

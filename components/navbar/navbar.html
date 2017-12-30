@@ -1,0 +1,16 @@
+<div class="custom-nav">
+  <ul class="nav nav-pills">
+    <li role="presentation">
+      <a ui-sref="app.home">Home</a>
+    </li>
+    <li role="presentation">
+      <a ui-sref="app.golfers">Golfers</a>
+    </li>
+    <li role="presentation">
+      <a ui-sref="app.courses">Courses</a>
+    </li>
+    <li role="presentation">
+      <a ng-click="logout()" ng-show="golferService.getCurrentGolfer()">Logout</a>
+    </li>
+  </ul>
+</div>

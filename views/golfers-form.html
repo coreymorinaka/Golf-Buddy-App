@@ -1,0 +1,66 @@
+<div class="golfers-form-bg">
+
+<div class="container">
+    
+      <h1 class="text-center golfers-form-header">{{ heading }}</h1>
+    
+        <h3 class="section-header golfers-form-header">Golfer Information</h3>
+    
+        <div class="form-group col-md-6">
+          <label>First Name</label>
+          <input type="text" class="form-control" placeholder="Rickie" ng-model="golfer.firstName">
+        </div>
+    
+        <div class="form-group col-md-6">
+          <label>Last Name</label>
+          <input type="text" class="form-control" placeholder="Fowler" ng-model="golfer.lastName">
+        </div>
+    
+        <div class="form-group col-md-4">
+          <label>Email</label>
+          <input type="text" class="form-control" placeholder="rickiefowler@gmail.com" ng-model="golfer.email">
+        </div>
+    
+        <div class="form-group col-md-4">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="" ng-model="golfer.password">
+        </div>
+    
+        <div class="form-group col-md-2">
+          <label>Age</label>
+          <input type="text" class="form-control" placeholder="28" ng-model="golfer.age">
+        </div>
+    
+        <div class="form-group col-md-2">
+          <label>Handicap</label>
+          <input type="text" class="form-control" placeholder="15" ng-model="golfer.handicap">
+        </div>
+    
+        <div class="form-group col-md-4">
+        <h5>Locations</h5>
+          <label>Los Angeles<input type="checkbox" ng-checked="false"  ng-model="golfer.locations.losAngeles"></label>
+          <label>Orange County<input type="checkbox" ng-checked="false"  ng-model="golfer.locations.orangeCounty"></label>
+          <label>Riverside<input type="checkbox" ng-checked="false"  ng-model="golfer.locations.riverside"></label>
+        </div>
+    
+        <div class="form-group col-md-4">
+          <h5>Availability</h5>
+          <label>M<input type="checkbox" ng-checked="false" ng-model="golfer.availability.monday"></label>
+          <label>Tu<input type="checkbox" ng-checked="false"  ng-model="golfer.availability.tuesday"></label>
+          <label>W<input type="checkbox" ng-checked="false"  ng-model="golfer.availability.wednesday"></label>
+          <label>Th<input type="checkbox" ng-checked="false"  ng-model="golfer.availability.thursday"></label>
+          <label>F<input type="checkbox" ng-checked="false"  ng-model="golfer.availability.friday"></label>
+          <label>Sa<input type="checkbox" ng-checked="false"  ng-model="golfer.availability.saturday"></label>
+          <label>Su<input type="checkbox" ng-checked="false"  ng-model="golfer.availability.sunday"></label>
+        </div>
+
+        <div class="form-group col-md-12">
+          <label>Bio</label>
+          <textarea class="form-control" rows="5" ng-model="golfer.bio"></textarea>
+        </div>
+    
+        <button ng-click="addGolfer()" class="btn btn-primary btn-lg pull-right" ng-show="submitButton">Submit</button>
+        <button ng-click="updateGolfer()" class="btn btn-success btn-lg pull-right" ng-show="!submitButton">Save</button>
+
+    </div>
+  </div>

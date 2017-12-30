@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .home-bg {
+    background-image: url("https://www.poipubaygolf.com/wp-content/uploads/2017/02/Kauai-Oceanfront-Golf-Course.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .unavailable {
+    color: transparent;
+    text-shadow: none;
+  }
+  .available {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .home-header {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .home-subheader {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  #map {
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+  }
+  .golfers-bg {
+    background-image: url("https://image.shutterstock.com/z/stock-photo-group-of-golfers-walking-along-fairway-carrying-golf-bags-388680991.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .golfers-h1 {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .golfer-section {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .golfer-bg {
+    background-image: url('../images/golf-787826_1920.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .courses-container {
+    box-shadow: 0 0 5px 0 black;
+  }
+  .golfers-form-bg {
+    background-image: url('../images/pictogram-2429072_1920.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .golfers-form-header {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .form-group {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .courses-form-bg {
+    background-image: url('../images/golf-2158897_1920.jpg');
+  }

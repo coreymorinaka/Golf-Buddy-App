@@ -1,0 +1,18 @@
+<div class="home-bg">
+    <div class="container">
+        <h1 class="text-center home-header">Welcome to the Golf Buddy App!</h1>
+        <div class="form-group">
+            <label class="home-subheader">Email:</label>
+            <input type="text" class="form-control" ng-model="golfer.email">
+        </div>
+        <div class="form-group">
+            <label class="home-subheader">Password:</label>
+            <input type="text" class="form-control" ng-model="golfer.password">
+        </div>
+
+        <button class="btn btn-primary" ng-click="login()">Login</button>
+        <button class="btn btn-info" ui-sref="app.golfersCreate">Create Golf Buddy Profile</button>
+
+    </div>
+
+</div>
